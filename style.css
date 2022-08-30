@@ -1,27 +1,43 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz@8..144&display=swap');
+html {
+    height: 100%;
+}
 body {
     font-family: 'Roboto Flex', sans-serif;
     padding:0;
     margin:0;
+    height:100%;
 
     display:flex;
     flex-direction: column;
+    padding:0 128px;
+}
+
+/*Strecht all elements */
+.header,.random-information,.quotes,.label{
+    max-width: 100%;
+    flex:2;
+}
+.footer {
+    min-width: 100%;
+    flex:1 ;
 }
 
 .header,.footer{
     background-color: #1F2937;
 }
 
+/*Style Header*/
 .header {
     display: flex;
     flex-direction: column;
-    padding: 8px 64px;
+    padding: 8px 128px;
 }
 
 .logo {
     font-size: 24px;
     color: #f9faf8;
-    flex:2;
+    flex:1 1 auto;
 }
 
 h1 {
@@ -41,6 +57,9 @@ li {
 
 button {
     background-color: #3882f6;
+    border-radius: 5px;
+    font-weight: bold;
+    color:#f9faf8
 }
 
 #first-row {
@@ -76,4 +95,103 @@ ul {
 
 #paragraph p {
     color:#e5e7eb;
+}
+
+/* Style Random Information */
+
+.random-information{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h2 {
+    font-size: 32px;
+    font-weight: 800;
+    color: #1f2937;
+}
+
+.items {
+    display: flex;
+    gap: 32px;
+}
+
+.item {
+    width: 200px;
+    text-align: center;
+    color: gray;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.item img {
+    width: 200px;
+    height:auto;
+    border-radius: 10%;
+}
+
+/*Style quotes */
+
+.quotes {
+    background-color: #e5e7eb;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 32px 0;
+}
+
+.quotes p{ 
+    width: 780px;
+    font-size: 36px;
+    font-weight: 300;
+    font-style: italic;
+    color: #1f2937;
+    margin: 0;
+}
+
+.author {
+    font-weight: bold;
+    width: 780px;
+    text-align: end;
+}
+
+/*Style label*/
+.label {
+    align-self: center;
+    background-color: #3882f6;
+    display: flex;
+    width: max-content;
+    gap: 16px;
+    align-items: center;
+    padding: 32px;
+    margin: 32px 0;
+    border-radius: 10px;
+}
+
+.call {
+    font-weight: bold;
+    color:#f9faf8;
+}
+.label p {
+    color:#e5e7eb;
+    margin:0;
+}
+
+.label button {
+    font-size: 16px;
+    font-weight: bold;
+    height: fit-content;
+    color:#f9faf8;
+    border-color: #f9faf8;
+    border-radius:5px;
+}
+
+/* Style footer */
+.footer {
+    min-height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color:#f9faf8
 }
